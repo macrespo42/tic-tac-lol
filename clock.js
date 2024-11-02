@@ -6,6 +6,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const updateTick = () => {
     if (tick <= 0) {
+      if (tick === 0) {
+        const beeper = document.getElementById("beep");
+        if (beep) beeper.play();
+      }
       tick = 10;
     } else {
       tick -= 1;
