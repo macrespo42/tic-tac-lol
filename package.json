@@ -1,0 +1,30 @@
+{
+  "name": "tic-tac-lol",
+  "version": "1.0.0",
+  "description": "A tools that remind you to check your mini map",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macrespo42/tic-tac-lol.git"
+  },
+  "keywords": [
+    "league",
+    "of",
+    "legends",
+    "lol",
+    "tool"
+  ],
+  "author": "macrespo42",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macrespo42/tic-tac-lol/issues"
+  },
+  "homepage": "https://github.com/macrespo42/tic-tac-lol#readme",
+  "devDependencies": {
+    "electron": "^33.0.2"
+  }
+}
