@@ -3,26 +3,6 @@
   "version": "1.0.0",
   "description": "A tools that remind you to check your mini map",
   "main": "main.js",
-  "config": {
-    "forge": {
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "platforms": [
-            "win32"
-          ],
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ],
-          "config": {}
-        }
-      ]
-    }
-  },
   "scripts": {
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",

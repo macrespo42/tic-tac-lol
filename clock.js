@@ -1,22 +1,34 @@
+let interval = null;
+let tick = 10;
+
+const startElt = document.getElementById("start");
+const stopElt = document.getElementById("stop");
+const clockElt = document.getElementById("timer");
+
 window.addEventListener("DOMContentLoaded", () => {
-  let tick = 10;
+  clockElt.innerText = tick;
+});
 
-  clock = document.getElementById("timer");
-  if (clock) clock.innerText = tick;
-
-  const updateTick = () => {
-    if (tick <= 0) {
-      if (tick === 0) {
-        const beeper = document.getElementById("beep");
-        if (beep) beeper.play();
-      }
-      tick = 10;
-    } else {
-      tick -= 1;
+const updateTick = () => {
+  if (tick <= 0) {
+    if (tick === 0) {
+      const beeperElt = document.getElementById("beep");
+      if (beep) beeperElt.play();
     }
-    clock = document.getElementById("timer");
-    if (clock) clock.innerText = tick;
-  };
+    tick = 10;
+  } else {
+    tick -= 1;
+  }
+  if (clockElt) clockElt.innerText = tick;
+};
 
-  setInterval(updateTick, 1000);
+stopElt.addEventListener("click", () => {
+  clearInterval(interval);
+  tick = 10;
+  if (clockElt) clockElt.innerText = tick;
+});
+
+startElt.addEventListener("click", () => {
+  tick = 10;
+  interval = setInterval(updateTick, 1000);
 });
