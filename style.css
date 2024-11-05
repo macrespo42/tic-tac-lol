@@ -1,0 +1,39 @@
+body {
+  color: #fff;
+}
+
+header {
+  text-align: center
+}
+
+h1 {
+  text-align: center;
+  color: #C8AA6E;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h2 {
+  font-size: 2rem;
+}
+
+button {
+  border: none;
+  border-radius: 15px;
+  background-color: #00B2CF;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  max-width: 50%;
+}
+
+button:hover {
+  color: #C8AA6E;
+  cursor: pointer;
+}

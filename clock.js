@@ -24,11 +24,12 @@ const updateTick = () => {
 
 stopElt.addEventListener("click", () => {
   clearInterval(interval);
+  interval = null;
   tick = 10;
   if (clockElt) clockElt.innerText = tick;
 });
 
 startElt.addEventListener("click", () => {
   tick = 10;
-  interval = setInterval(updateTick, 1000);
+  if (!interval) interval = setInterval(updateTick, 1000);
 });
