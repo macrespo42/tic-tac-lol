@@ -1,5 +1,7 @@
+const tickSelector = document.getElementById("timer-select");
+
 let interval = null;
-let tick = 10;
+let tick = parseInt(tickSelector.value);
 
 const startElt = document.getElementById("start");
 const stopElt = document.getElementById("stop");
@@ -9,13 +11,18 @@ window.addEventListener("DOMContentLoaded", () => {
   clockElt.innerText = tick;
 });
 
+tickSelector.addEventListener("onChange", (e) => {
+  tick = parseInt(e.target.value);
+  clockElt.innerText = tick;
+});
+
 const updateTick = () => {
   if (tick <= 0) {
     if (tick === 0) {
       const beeperElt = document.getElementById("beep");
       if (beep) beeperElt.play();
     }
-    tick = 10;
+    tick = parseInt(tickSelector.value);
   } else {
     tick -= 1;
   }
@@ -25,11 +32,11 @@ const updateTick = () => {
 stopElt.addEventListener("click", () => {
   clearInterval(interval);
   interval = null;
-  tick = 10;
+  tick = parseInt(tickSelector.value);
   if (clockElt) clockElt.innerText = tick;
 });
 
 startElt.addEventListener("click", () => {
-  tick = 10;
+  tick = parseInt(tickSelector.value);
   if (!interval) interval = setInterval(updateTick, 1000);
 });

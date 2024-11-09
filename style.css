@@ -19,6 +19,17 @@ h1 {
   align-items: center;
 }
 
+#timer-select {
+  color: white;
+  border: none;
+  background-color: #0A1428;
+  padding: 10px 40px 10px 0;
+}
+
+#timer-select:hover {
+  cursor: pointer;
+}
+
 .main h2 {
   font-size: 2rem;
 }
@@ -31,6 +42,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   max-width: 50%;
+  transition: color ease-in-out 0.3s;
 }
 
 button:hover {
