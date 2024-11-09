@@ -16,4 +16,34 @@ i have to find 3 video with a beep with these interval ? Really annoying 🤔 (Y
 
 ## Quickstart
 
-WIP...
+The program is available [here](https://github.com/macrespo42/tic-tac-lol/releases/tag/beta)  
+its currently available on Windows and Macos. (If someone need it for another platform since its an electron app just ask me and i can make it available)
+
+Once installed the application should look like this:
+
+![tic-tac-lol screenshot](screenshots/tic-tac-lol.png)
+
+You've got 3 level available:
+
+- level 1: beep every 15 seconds
+- level 2: beep every 10 seconds
+- level 3: beep every 5 seconds
+
+## 🤝 Contributing
+
+### Clone the repo
+
+```bash
+git clone https://github.com/macrespo42/tic-tac-lol
+cd tic-tac-lol
+```
+
+### Run the project
+
+```bash
+npm run start
+```
+
+### Submit a pull request
+
+If you'd like to contribute, please fork the repository and open a pull request to the `main` branch.
