@@ -1,14 +1,33 @@
+@font-face {
+  font-family: 'beaufort';
+  src: url('fonts/beaufort_for_lol_bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: spiegel;
+  src: url('fonts/spiegel.ttf');
+}
+
 body {
   color: #fff;
+  font-family: spiegel;
 }
 
 header {
-  text-align: center
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-h1 {
+header h1 {
   text-align: center;
   color: #C8AA6E;
+  font-family: 'beaufort', Fallback;
+  font-size: 4rem;
+}
+
+header p {
+  font-size: 1.5rem;
 }
 
 .main {
@@ -24,10 +43,8 @@ h1 {
   border: none;
   background-color: #0A1428;
   padding: 10px 40px 10px 0;
-}
-
-#timer-select:hover {
-  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  margin-bottom: 1rem;
 }
 
 .main h2 {
@@ -45,7 +62,12 @@ button {
   transition: color ease-in-out 0.3s;
 }
 
-button:hover {
+button:hover,
+#timer-select:hover {
   color: #C8AA6E;
   cursor: pointer;
+}
+
+#timer-select:hover {
+  border-bottom: 5px solid #00B2CF;
 }
