@@ -16,7 +16,7 @@ i have to find 3 video with a beep with these interval ? Really annoying 🤔 (Y
 
 ## Quickstart
 
-The program is available [here](https://github.com/macrespo42/tic-tac-lol/releases/tag/beta)  
+The program is available [here](https://github.com/macrespo42/tic-tac-lol/releases/tag/1.0.0)  
 its currently available on Windows and Macos. (If someone need it for another platform since its an electron app just ask me and i can make it available)
 
 Once installed the application should look like this:
