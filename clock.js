@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
   clockElt.innerText = tick;
 });
 
-tickSelector.addEventListener("onChange", (e) => {
+tickSelector.addEventListener("change", (e) => {
   tick = parseInt(e.target.value);
   clockElt.innerText = tick;
 });
