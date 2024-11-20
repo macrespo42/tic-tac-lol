@@ -11,6 +11,23 @@ window.addEventListener("DOMContentLoaded", () => {
   clockElt.innerText = tick;
 });
 
+window.addEventListener("keypress", (e) => {
+  if (e.code === "Space") {
+    if (interval) {
+      clearInterval(interval);
+      interval = null;
+    } else {
+      interval = setInterval(updateTick, 1000);
+    }
+  }
+  if (e.code === "KeyR") {
+    clearInterval(interval);
+    interval = null;
+    tick = parseInt(tickSelector.value);
+    if (clockElt) clockElt.innerText = tick;
+  }
+});
+
 tickSelector.addEventListener("change", (e) => {
   tick = parseInt(e.target.value);
   clockElt.innerText = tick;
